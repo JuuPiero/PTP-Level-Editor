@@ -1,0 +1,6 @@
+{
+  "name": "PTP - editor",
+  "description": "A level editor for the game Pet Tunnel Puzzle. Create and edit levels by placing pets, exits, holes, and various obstacles on a grid.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
