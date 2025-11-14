@@ -65,7 +65,7 @@ const App: React.FC = () => {
           onDrawingStateChange={handlers.setDrawingState}
         />
 
-        <main className="flex-1 flex flex-col items-center justify-center p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+        <main className="flex-1 flex flex-col items-center p-4 bg-gray-800/50 rounded-lg border border-gray-700">
           <div className="flex justify-between w-full items-center mb-4 px-2">
               <h2 className="text-2xl font-bold text-white">{level.levelName} <span className="text-lg font-normal text-gray-400">- {mode === 'edit' ? 'Editing' : 'Playing'}</span></h2>
               <div className="flex items-center gap-4">

@@ -495,11 +495,16 @@ export const useLevelEditor = () => {
             return;
         }
 
+        // Prevent default context menu on right click
+        if (e.button === 2) {
+            e.preventDefault();
+        }
+
         const objectAtCoords = getObjectAtCoords(coords, levelRef.current);
         setSelectedObject(objectAtCoords);
 
-        // Eraser behavior: remove object except walls unless explicit behavior for wall (you had earlier logic to convert grid)
-        if (selectedTool === 'eraser' && objectAtCoords) {
+        // Eraser behavior: remove object on right click or when eraser tool is selected
+        if ((e.button === 2 || selectedTool === 'eraser') && objectAtCoords) {
             const objectToDelete = objectAtCoords;
             updateLevel(draft => {
                 let found = false;

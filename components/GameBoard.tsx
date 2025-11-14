@@ -208,6 +208,7 @@ export const GameBoard: React.FC<GameBoardProps> = ({ level, mode, selectedObjec
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseLeave}
+        onContextMenu={(e) => e.preventDefault()}
     >
       <div style={gridStyle}>
         {cells.map(({ key, x, y, isWall }) => (
